@@ -10,6 +10,9 @@ public class MineSweeper {
     int mineNumber;
     boolean isGameOn=true;
     Scanner scan = new Scanner(System.in);
+    MineSweeper(){
+
+    }
     // Constructor method.
     MineSweeper(int row, int col){
         this.row = row;
@@ -79,8 +82,8 @@ public class MineSweeper {
                 System.out.println("Invalid input. ");
                 if(sRow<0) System.out.println(sRow + " is negative number.");
                 if(sCol<0) System.out.println(sCol + " is negative number.");
-                if(sRow>=this.row) System.out.println(sRow + " is greater than array size(" + this.row + ")");
-                if(sCol>=this.col) System.out.println(sCol + " is greater than array size(" + this.col + ")");
+                if(sRow>=this.row) System.out.println("Row input should be smaller than " + this.row);
+                if(sCol>=this.col) System.out.println("Col input should be smaller than " + this.col);
                 continue;
             }
             // Calculating the number of mines around the point.
