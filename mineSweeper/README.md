@@ -1,7 +1,7 @@
 # MineSweeper
 - This project is a simulation written with the logic of the Minesweeper game released by Microsoft.
 - The aim of the game is to find all the empty squares in an area without running into mines.
-- The numbers that appear when you click on the squares show the total number of mines around the square.
+- The numbers that appear when you click on the squares shows the total number of mines around the square.
 
 ## Sample Outputs:
 - The user determines the area of the game.<br><br>
