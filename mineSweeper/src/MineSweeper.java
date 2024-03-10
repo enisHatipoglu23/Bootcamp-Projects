@@ -72,9 +72,9 @@ public class MineSweeper {
         while(isGameOn){
             count = 0;
             printField(board);
-            System.out.println("Enter the row you want to open: (0 --> " + (this.row-1)+")");
+            System.out.println("Enter the row you want to open: (0 ---> " + (this.row-1)+")");
             sRow = scan.nextInt();
-            System.out.println("Enter the column you want to open: (0 --> " +  + (this.col-1)+")");
+            System.out.println("Enter the column you want to open: (0 ---> " +  + (this.col-1)+")");
             sCol = scan.nextInt();
 
             // Checks if user input is valid.
