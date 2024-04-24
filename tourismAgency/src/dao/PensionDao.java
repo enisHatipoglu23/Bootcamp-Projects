@@ -6,10 +6,7 @@ import entity.Pension;
 import entity.Role;
 import entity.User;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class PensionDao {
@@ -20,6 +17,21 @@ public class PensionDao {
         this.con = Db.getInstance();
     }
 
+    public ArrayList<Pension> findAll(){
+        ArrayList<Pension> pensionArrayList = new ArrayList<>();
+        String query = "SELECT * FROM public.pensions";
+        try{
+            Statement st = this.con.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()){
+                pensionArrayList.add(this.match(rs));
+            }
+
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+        return pensionArrayList;
+    }
     public ArrayList<Pension> findPensionByHotelId(int selectedHotelId){
         ArrayList<Pension> pensionList = new ArrayList<>();
         String query = "SELECT * FROM public.pensions WHERE pension_hotel_id = ?";

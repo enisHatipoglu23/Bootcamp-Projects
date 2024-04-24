@@ -45,6 +45,7 @@ public class EmployeeView extends Layout{
     private JButton btn_add_season;
     private JComboBox cmb_room_hotelname;
     private JTextField fld_room_city;
+    private JButton addRoomButton;
     private JComboBox cmb_room_address;
     private JPopupMenu popup_hotels = new JPopupMenu();
     private DefaultTableModel tmdl_hotel = new DefaultTableModel();
@@ -76,6 +77,7 @@ public class EmployeeView extends Layout{
             this.cmb_room_hotelname.addItem(hotels.getName());
         }
         this.cmb_room_hotelname.setSelectedItem(null);
+
 
     }
 
@@ -124,6 +126,9 @@ public class EmployeeView extends Layout{
             );
             loadRoomTable(filteredRooms);
 
+        });
+        addRoomButton.addActionListener(e -> {
+            RoomSaveView roomSaveView = new RoomSaveView(new Room());
         });
 
 
