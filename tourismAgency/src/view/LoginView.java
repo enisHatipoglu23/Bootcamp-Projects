@@ -47,7 +47,6 @@ public class LoginView extends Layout{
             }
         });
     }
-
     private void openAdminView(User user){
         AdminView adminView = new AdminView(user);
         adminView.setVisible(true);

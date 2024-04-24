@@ -126,7 +126,6 @@ public class AdminView extends Layout{
                 }
             });
         });
-
         this.btn_user_filter.addActionListener(e -> {
             ArrayList<User> filteredUsers = this.userManager.filter(
                     this.fld_f_username.getText(),

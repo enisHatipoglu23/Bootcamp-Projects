@@ -11,7 +11,6 @@ public class Db {
     private final String DB_URL = "jdbc:postgresql://localhost:5432/agency";
     private final String DB_USERNAME = "postgres";
     private final String DB_PASS = "postgres";
-
     private Db() {
         try {
             this.connection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASS);

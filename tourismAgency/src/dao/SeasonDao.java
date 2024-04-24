@@ -61,7 +61,6 @@ public class SeasonDao {
         }
         return obj;
     }
-
     public boolean update(Season season){
         String query = "UPDATE public.seasons SET season_hotel_id = ? , start_date = ? ," +
                 " finish_date = ? WHERE season_id = ?";

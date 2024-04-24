@@ -14,7 +14,6 @@ public class Reservation {
     private String guestCitizenId;
     private String guestMail;
     private String guestPhone;
-
     public Reservation() {
     }
 

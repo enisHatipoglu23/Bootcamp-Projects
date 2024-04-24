@@ -14,7 +14,6 @@ public class HotelManager {
     public HotelManager(){
         this.hotelDao = new HotelDao();
     }
-
     public ArrayList<Hotel> findAll(){
         return hotelDao.findAll();
     }

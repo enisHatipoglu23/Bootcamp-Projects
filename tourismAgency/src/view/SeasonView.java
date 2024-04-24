@@ -29,7 +29,6 @@ public class SeasonView extends Layout {
     private Season season;
     private Hotel hotel;
     private SeasonManager seasonManager;
-
     public SeasonView(Season season, Hotel hotel) {
         this.season = season;
         this.hotel = hotel;

@@ -54,7 +54,6 @@ public class EditView extends Layout{
                     result = this.userManager.update(this.user);
                 }
 
-
                 if(result){
                     Helper.showMsg("done");
                     dispose();

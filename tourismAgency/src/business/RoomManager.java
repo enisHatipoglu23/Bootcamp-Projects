@@ -26,7 +26,6 @@ public class RoomManager {
     }
 
     public ArrayList<Room> filter(Integer hotelId, String hotelAddress){
-
         String query = "SELECT * FROM public.rooms r JOIN public.hotels h ON r.room_hotel_id = h.hotel_id";
         ArrayList<String> whereList = new ArrayList<>();
 

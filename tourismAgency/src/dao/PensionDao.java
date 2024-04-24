@@ -16,7 +16,6 @@ public class PensionDao {
     public PensionDao(){
         this.con = Db.getInstance();
     }
-
     public ArrayList<Pension> findAll(){
         ArrayList<Pension> pensionArrayList = new ArrayList<>();
         String query = "SELECT * FROM public.pensions";

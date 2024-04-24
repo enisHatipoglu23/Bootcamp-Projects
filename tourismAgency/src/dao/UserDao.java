@@ -74,7 +74,6 @@ public class UserDao {
         }
         return employeeArrayList;
     }
-
     public boolean save(User user){
         String query = "INSERT INTO public.users (username, password, user_role) values (?,?,?)";
         try {

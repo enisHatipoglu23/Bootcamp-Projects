@@ -125,7 +125,6 @@ public class EmployeeView extends Layout{
                     this.fld_room_city.getText().toUpperCase()
             );
             loadRoomTable(filteredRooms);
-
         });
         addRoomButton.addActionListener(e -> {
             RoomSaveView roomSaveView = new RoomSaveView(new Room());

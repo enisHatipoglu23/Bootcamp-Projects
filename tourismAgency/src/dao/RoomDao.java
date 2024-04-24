@@ -29,7 +29,6 @@ public class RoomDao {
         }
         return roomList;
     }
-
     public ArrayList<Room> query(String query){
         ArrayList<Room> rooms = new ArrayList<>();
         try {

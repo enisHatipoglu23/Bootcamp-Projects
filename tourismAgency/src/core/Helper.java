@@ -53,7 +53,6 @@ public class Helper {
         }
         return JOptionPane.showConfirmDialog(null, msg, "Emin misin ?", JOptionPane.YES_NO_OPTION) == 0;
     }
-
     public static boolean isFieldEmpty(JTextField field) {
         return field.getText().trim().isEmpty();
     }

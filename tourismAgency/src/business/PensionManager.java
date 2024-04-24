@@ -13,7 +13,6 @@ public class PensionManager {
     public PensionManager(){
         this.pensionDao = new PensionDao();
     }
-
     public boolean save(Pension pension){
         return this.pensionDao.save(pension);
     }

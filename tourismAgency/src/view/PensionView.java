@@ -54,7 +54,6 @@ public class PensionView extends Layout{
                 Helper.showMsg("Lütfen bir pansiyon tipi seçiniz.");
                 return;
             }
-
             // Seçilen otelin ID'sini al
             int selectedHotelId = hotelManager.findAll().get(selectedHotelIndex).getId();
 

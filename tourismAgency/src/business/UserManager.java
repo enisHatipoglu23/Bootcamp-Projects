@@ -52,7 +52,6 @@ public class UserManager {
         }
         return this.userDao.delete(id);
     }
-
     public ArrayList<User> filter(String name, Role role){
         // SELECT * FROM public.user WHERE name LIKE %enis% AND role = 'EMPLOYEE';
         // SELECT * FROM public.user WHERE name LIKE %enis%;

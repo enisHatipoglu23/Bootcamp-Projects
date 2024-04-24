@@ -92,7 +92,6 @@ public class HotelSaveView extends Layout{
                     result = this.hotelManager.update(this.hotel);
                 }
 
-
                 if(result){
                     Helper.showMsg("done");
                     dispose();

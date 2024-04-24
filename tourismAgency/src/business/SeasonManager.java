@@ -9,7 +9,6 @@ import java.util.ArrayList;
 
 public class SeasonManager {
     private final SeasonDao seasonDao;
-
     public SeasonManager(){
         this.seasonDao = new SeasonDao();
     }

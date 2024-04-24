@@ -16,8 +16,8 @@ public class Hotel {
     private boolean roomService;
 
     public Hotel() {
-    }
 
+    }
     public Hotel(int id, String name, String address, String mail, String phone, String star, boolean carPark,
                  boolean wifi, boolean pool, boolean fitness, boolean concierge, boolean spa, boolean roomService) {
         this.id = id;

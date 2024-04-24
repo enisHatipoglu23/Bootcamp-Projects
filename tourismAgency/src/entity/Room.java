@@ -16,7 +16,6 @@ public class Room {
     private boolean gameConsole;
     private boolean cashBox;
     private boolean projection;
-
     public Room() {
     }
 

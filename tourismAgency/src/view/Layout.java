@@ -29,7 +29,6 @@ public class Layout extends JFrame {
     public int getTableSelectedRow(JTable table, int index){
         return Integer.parseInt(table.getValueAt(table.getSelectedRow(), index).toString());
     }
-
     public void createTable(DefaultTableModel model, JTable table, Object[] columns, ArrayList<Object[]> rows) {
         model.setColumnIdentifiers(columns);
         table.setModel(model);

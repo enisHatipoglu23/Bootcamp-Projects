@@ -43,9 +43,7 @@ public class RoomSaveView extends Layout{
 
         this.loadComboboxFields();
 
-
     }
-
     private void loadComboboxFields(){
         this.cmb_hotel_select.setModel(new DefaultComboBoxModel<>());
 

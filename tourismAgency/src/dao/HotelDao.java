@@ -15,7 +15,6 @@ public class HotelDao {
     public HotelDao() {
         this.con = Db.getInstance();
     }
-
     public ArrayList<Hotel> findAll(){
         ArrayList<Hotel> hotelArrayList = new ArrayList<>();
         String query = "SELECT * FROM public.hotels";
