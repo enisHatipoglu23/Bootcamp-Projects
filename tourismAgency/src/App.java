@@ -8,4 +8,5 @@ public class App {
         Helper.setTheme();
        LoginView loginView = new LoginView();
     }
+
 }

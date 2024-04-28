@@ -8,7 +8,6 @@ import java.util.ArrayList;
 
 public class PensionManager {
     private final PensionDao pensionDao;
-
     public PensionManager(){
         this.pensionDao = new PensionDao();
     }

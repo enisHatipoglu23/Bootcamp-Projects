@@ -13,7 +13,6 @@ public class UserDao {
     public UserDao(){
         this.con = Db.getInstance();
     }
-
     public ArrayList<User> findAll(){
         ArrayList<User> userArrayList = new ArrayList<>();
         String query = "SELECT * FROM public.users";

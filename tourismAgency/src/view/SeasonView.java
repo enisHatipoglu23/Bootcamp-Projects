@@ -46,7 +46,6 @@ public class SeasonView extends Layout {
         }
         this.cmb_seas_hotel.setSelectedItem(null);
 
-
         btn_save.addActionListener(e -> {
             int selectedHotelIndex = cmb_seas_hotel.getSelectedIndex();
 

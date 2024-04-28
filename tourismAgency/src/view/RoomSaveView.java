@@ -64,7 +64,6 @@ public class RoomSaveView extends Layout{
                 updateSeasonsAndPensions();
             }
         });
-
         if(this.room.getId() == 0){
             this.fld_room.setText("Add Room");
         }else{

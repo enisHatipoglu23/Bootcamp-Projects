@@ -23,7 +23,6 @@ public class ReservationDao {
             while (rs.next()){
                 reservations.add(this.match(rs));
             }
-
         }catch (SQLException e){
             System.out.println(e.getMessage());
         }

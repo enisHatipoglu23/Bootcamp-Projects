@@ -43,7 +43,6 @@ public class Layout extends JFrame {
         if (rows == null) {
             rows = new ArrayList<>();
         }
-
         for (Object[] row : rows) {
             model.addRow(row);
         }

@@ -33,7 +33,6 @@ public class Season {
     public void setStartDate(LocalDate startDate) {
         this.startDate = startDate;
     }
-
     public LocalDate getFinishDate() {
         return finishDate;
     }

@@ -71,7 +71,6 @@ public class Room {
     public void setSeasonId(int seasonId) {
         this.seasonId = seasonId;
     }
-
     public String getType() {
         return type;
     }

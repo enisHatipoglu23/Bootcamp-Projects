@@ -35,7 +35,6 @@ public class PensionView extends Layout{
             this.cmb_pns_hotel.addItem(hotels.getName());
         }
         this.cmb_pns_hotel.setSelectedItem(null);
-
         this.cmb_pensions.setModel(new DefaultComboBoxModel<>());
         String[] types = {"Ultra Her şey Dahil", "Her şey Dahil", "Oda Kahvaltı", "Tam Pansiyon",
                 "Yarım Pansiyon", "Sadece Yatak", "Alkol Hariç Full credit"};

@@ -40,7 +40,6 @@ public class HotelManager {
         }
         return this.hotelDao.delete(id);
     }
-
     public ArrayList<Hotel> filter(String address){
         String query = "SELECT * FROM public.hotels";
         ArrayList<String> whereList = new ArrayList<>();

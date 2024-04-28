@@ -21,7 +21,6 @@ public class PensionDao {
             while (rs.next()){
                 pensionArrayList.add(this.match(rs));
             }
-
         }catch (SQLException e){
             System.out.println(e.getMessage());
         }

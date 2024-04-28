@@ -42,7 +42,6 @@ public class UserManager {
         }
             return this.userDao.update(user);
     }
-
     public boolean delete(int id){
         if(this.getById(id) == null){
             Helper.showMsg(id + " id numaralı kullanıcı bulunamadı. ");

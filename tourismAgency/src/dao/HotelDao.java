@@ -24,7 +24,6 @@ public class HotelDao {
             while (rs.next()){
                 hotelArrayList.add(this.match(rs));
             }
-
         }catch (SQLException e){
             System.out.println(e.getMessage());
         }

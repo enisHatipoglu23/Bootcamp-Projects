@@ -27,7 +27,6 @@ public class RoomDao {
         }
         return roomList;
     }
-
     public boolean updateRoomStock(int roomStock, Room room){
         String query = "UPDATE rooms\n" +
                 "SET stock = ?\n" +

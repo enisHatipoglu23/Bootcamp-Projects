@@ -13,7 +13,6 @@ public class Pension {
 
     public Pension() {
     }
-
     public int getId() {
         return id;
     }

@@ -12,7 +12,6 @@ public class SeasonDao {
     public SeasonDao(){
         this.con = Db.getInstance();
     }
-
     public boolean save(Season season){
         String query = "INSERT INTO public.seasons " +
                 "(season_hotel_id, start_date, finish_date)" +

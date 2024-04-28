@@ -7,7 +7,6 @@ import java.util.ArrayList;
 
 public class ReservationManager {
     private final ReservationDao reservationDao;
-
     public ReservationManager(){
         this.reservationDao = new ReservationDao();
     }

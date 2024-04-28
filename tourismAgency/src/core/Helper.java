@@ -75,12 +75,6 @@ public class Helper {
         }
         return false;
     }
-//    public static boolean isComboboxSelected(JComboBox comboBox) {
-//        if(comboBox.getSelectedItem() == null){
-//
-//        }
-//    }
-
 
     public static int getLocationPoint(String type, Dimension size) {
         return switch (type) {

@@ -14,7 +14,6 @@ public class Hotel {
     private boolean concierge;
     private boolean spa;
     private boolean roomService;
-
     public Hotel() {
 
     }

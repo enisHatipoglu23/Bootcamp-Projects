@@ -9,9 +9,7 @@ public class SeasonManager {
     public SeasonManager(){
         this.seasonDao = new SeasonDao();
     }
-//    public ArrayList<Season> findSeasonByHotelId(int hotelId){
-//        return this.seasonDao.findSeasonByHotelId(hotelId);
-//    }
+
     public boolean save(Season season){
         return this.seasonDao.save(season);
     }

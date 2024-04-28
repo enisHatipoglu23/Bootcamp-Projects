@@ -98,7 +98,6 @@ public class ReservationView extends Layout{
         this.add(this.container);
         this.guiInitilaze(1800,600,"Reservation Panel");
 
-
         if(this.reservation.getId() == 0){
             this.hotel = this.hotelManager.getById(this.room.getHotelId());
             this.fld_checkin_res.setText(startDate.getText());

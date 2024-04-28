@@ -115,7 +115,6 @@ public class AdminView extends Layout{
 
         this.tbl_user.setComponentPopupMenu(this.popup_user);
     }
-
     private void loadUserButtons(){
         this.btn_user_new.addActionListener(e -> {
             EditView editView = new EditView(new User());

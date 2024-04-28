@@ -20,7 +20,6 @@ public class LoginView extends Layout{
 
     // login panel features applied in this class
     private UserManager userManager;
-
     public LoginView(){
         this.userManager = new UserManager();
         this.add(container);

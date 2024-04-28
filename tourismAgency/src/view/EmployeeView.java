@@ -210,7 +210,6 @@ public class EmployeeView extends Layout{
                 Helper.showMsg("Please fill in all required fields before adding a reservation.");
             }
         });
-
         this.tbl_reservation.addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {

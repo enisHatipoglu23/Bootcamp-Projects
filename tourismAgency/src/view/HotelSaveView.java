@@ -45,7 +45,6 @@ public class HotelSaveView extends Layout{
         for (int i = 0; i<stars.length; i++){
             cmb_star.addItem(stars[i]);
         }
-
         if(this.hotel.getId() == 0) {
             this.lbl_add_hotel.setText("New Hotel Registration");
         }else {

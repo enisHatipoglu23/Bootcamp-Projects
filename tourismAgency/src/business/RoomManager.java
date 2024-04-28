@@ -9,7 +9,6 @@ import java.util.Date;
 
 public class RoomManager {
     private final RoomDao roomDao;
-
     public RoomManager(){
         this.roomDao = new RoomDao();
     }

@@ -45,7 +45,6 @@ public class EditView extends Layout{
                 this.user.setUsername(this.fld_username.getText());
                 this.user.setPassword(this.psw_user.getText());
                 this.user.setRole((Role) this.cmb_role.getSelectedItem());
-
                 if(this.user.getUserId() == 0){
                     //kaydetme işlemi
                     result = this.userManager.save(this.user);

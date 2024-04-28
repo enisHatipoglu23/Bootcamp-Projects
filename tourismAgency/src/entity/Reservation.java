@@ -9,7 +9,6 @@ public class Reservation {
     private LocalDate checkOutDate;
     private double totalPrice;
     private int guestCount;
-
     private String guestName;
     private String guestCitizenId;
     private String guestMail;
