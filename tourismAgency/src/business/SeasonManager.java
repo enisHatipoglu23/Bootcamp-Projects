@@ -1,10 +1,7 @@
 package business;
 
-import core.Helper;
 import dao.SeasonDao;
-import entity.Pension;
 import entity.Season;
-
 import java.util.ArrayList;
 
 public class SeasonManager {
@@ -18,8 +15,15 @@ public class SeasonManager {
     public boolean save(Season season){
         return this.seasonDao.save(season);
     }
-    public Season findSeasonByHotelID(int seasonHotelId){
-        return this.seasonDao.findSeasonByHotelID(seasonHotelId);
+    public ArrayList<Season> findSeasonByHotelID(int seasonHotelId){
+        return this.seasonDao.findSeasonsByHotelID(seasonHotelId);
+    }
+    public Season findSeasonByID(int seasonID){
+        return this.seasonDao.findSeasonByID(seasonID);
+    }
+
+    public ArrayList<Season> findAll(){
+        return this.seasonDao.findAll();
     }
 
 }

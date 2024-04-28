@@ -33,6 +33,8 @@ public class HotelSaveView extends Layout{
     private JLabel fld_star;
     private HotelManager hotelManager;
     private Hotel hotel;
+
+    // add hotel panel features applied in this class
     public HotelSaveView(Hotel hotel){
         this.hotel = hotel;
         this.hotelManager = new HotelManager();

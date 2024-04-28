@@ -3,9 +3,6 @@ package business;
 import core.Helper;
 import dao.HotelDao;
 import entity.Hotel;
-import entity.Role;
-import entity.User;
-
 import java.util.ArrayList;
 
 public class HotelManager {
@@ -24,7 +21,7 @@ public class HotelManager {
 
     public boolean update(Hotel hotel){
         if(getById(hotel.getId()) == null){
-            Helper.showMsg(hotel.getId() + " id numaralı kullanıcı bulunamadı. ");
+            Helper.showMsg(hotel.getId() + " id numaralı otel bulunamadı. ");
             return false;
         }
         return this.hotelDao.update(hotel);
@@ -45,9 +42,6 @@ public class HotelManager {
     }
 
     public ArrayList<Hotel> filter(String address){
-        // SELECT * FROM public.user WHERE name LIKE %enis% AND role = 'EMPLOYEE';
-        // SELECT * FROM public.user WHERE name LIKE %enis%;
-        // SELECT * FROM public.user WHERE role = 'ADMIN';
         String query = "SELECT * FROM public.hotels";
         ArrayList<String> whereList = new ArrayList<>();
         if(!address.isEmpty()){

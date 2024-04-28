@@ -2,7 +2,6 @@ package business;
 
 import core.Helper;
 import dao.PensionDao;
-import entity.Hotel;
 import entity.Pension;
 
 import java.util.ArrayList;

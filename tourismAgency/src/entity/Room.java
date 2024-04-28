@@ -159,4 +159,23 @@ public class Room {
     public void setProjection(boolean projection) {
         this.projection = projection;
     }
+
+    @Override
+    public String toString() {
+        return "id=" + id +
+                ", hotelId=" + hotelId +
+                ", pensionId=" + pensionId +
+                ", seasonId=" + seasonId +
+                ", type='" + type + '\'' +
+                ", stock=" + stock +
+                ", adultPrice=" + adultPrice +
+                ", childPrice=" + childPrice +
+                ", bedCapacity=" + bedCapacity +
+                ", squareMeter=" + squareMeter +
+                ", television=" + television +
+                ", minibar=" + minibar +
+                ", gameConsole=" + gameConsole +
+                ", cashBox=" + cashBox +
+                ", projection=" + projection;
+    }
 }

@@ -18,6 +18,7 @@ public class LoginView extends Layout{
     private JTextField fld_password;
     private JButton btn_login;
 
+    // login panel features applied in this class
     private UserManager userManager;
 
     public LoginView(){

@@ -2,6 +2,11 @@ package core;
 
 import javax.swing.*;
 import java.awt.*;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.sql.Date;
+
 
 public class Helper {
     public static void setTheme() {
@@ -70,12 +75,11 @@ public class Helper {
         }
         return false;
     }
-    public static boolean isComboboxSelected(JTextField[] fieldList) {
-        for (JTextField field : fieldList) {
-            if (isFieldEmpty(field)) return true;
-        }
-        return false;
-    }
+//    public static boolean isComboboxSelected(JComboBox comboBox) {
+//        if(comboBox.getSelectedItem() == null){
+//
+//        }
+//    }
 
 
     public static int getLocationPoint(String type, Dimension size) {
@@ -90,5 +94,18 @@ public class Helper {
         UIManager.put("OptionPane.okButtonText", "Tamam");
         UIManager.put("OptionPane.yesButtonText", "Evet");
         UIManager.put("OptionPane.noButtonText", "Hayır");
+    }
+
+    public static Date convertStringToSqlDate(String dateString) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        try {
+            LocalDate localDate = LocalDate.parse(dateString, formatter);
+            return Date.valueOf(localDate);
+        } catch (DateTimeParseException e) {
+            if (dateString != null && !dateString.isEmpty()) {
+                showMsg("Yanlış format !\n (yyyy-MM-dd)");
+            }
+            return null;
+        }
     }
 }

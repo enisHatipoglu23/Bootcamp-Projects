@@ -4,9 +4,7 @@ import core.Helper;
 import dao.UserDao;
 import entity.Role;
 import entity.User;
-
 import java.util.ArrayList;
-
 
 public class UserManager {
     private final UserDao userDao;
@@ -53,9 +51,6 @@ public class UserManager {
         return this.userDao.delete(id);
     }
     public ArrayList<User> filter(String name, Role role){
-        // SELECT * FROM public.user WHERE name LIKE %enis% AND role = 'EMPLOYEE';
-        // SELECT * FROM public.user WHERE name LIKE %enis%;
-        // SELECT * FROM public.user WHERE role = 'ADMIN';
         String query = "SELECT * FROM public.users";
         ArrayList<String> whereList = new ArrayList<>();
         if(!name.isEmpty()){

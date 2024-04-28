@@ -1,17 +1,13 @@
 package dao;
 
 import core.Db;
-import entity.Hotel;
 import entity.Pension;
-import entity.Role;
-import entity.User;
 
 import java.sql.*;
 import java.util.ArrayList;
 
 public class PensionDao {
     private final Connection con;
-    private Pension pension;
 
     public PensionDao(){
         this.con = Db.getInstance();
@@ -60,21 +56,6 @@ public class PensionDao {
         }
         return true;
     }
-//    public Pension findPensionByHotelId(int hotelId){
-//        Pension obj = null;
-//        String query = "SELECT * FROM public.pensions WHERE pension_hotel_id = ?";
-//        try {
-//            PreparedStatement pr = this.con.prepareStatement(query);
-//            pr.setInt(1,hotelId);
-//            ResultSet rs = pr.executeQuery();
-//            if(rs.next()){
-//                obj = this.match(rs);
-//            }
-//        } catch (SQLException e) {
-//            System.out.println(e.getMessage());
-//        }
-//        return obj;
-//    }
     public Pension findById(int pensionId){
         Pension obj = null;
         String query = "SELECT * FROM public.pensions WHERE pension_id = ?";

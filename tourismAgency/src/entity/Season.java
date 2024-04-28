@@ -41,4 +41,9 @@ public class Season {
     public void setFinishDate(LocalDate finishDate) {
         this.finishDate = finishDate;
     }
+
+    public String toStringDates() {
+        return startDate +
+                " to " + finishDate;
+    }
 }

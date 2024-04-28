@@ -1,7 +1,6 @@
 package dao;
 
 import core.Db;
-import entity.Pension;
 import entity.Season;
 
 import java.sql.*;
@@ -9,28 +8,11 @@ import java.util.ArrayList;
 
 public class SeasonDao {
     private final Connection con;
-    private Pension pension;
 
     public SeasonDao(){
         this.con = Db.getInstance();
     }
 
-//    public ArrayList<Season> findSeasonByHotelId(int selectedHotelId){
-//        ArrayList<Season> seasonList = new ArrayList<>();
-//        String query = "SELECT * FROM public.seasons WHERE season_hotel_id = ?";
-//        try{
-//            PreparedStatement pr = this.con.prepareStatement(query);
-//            pr.setInt(1,selectedHotelId);
-//
-//            ResultSet rs = pr.executeQuery();
-//            while(rs.next()){
-//                seasonList.add(this.match(rs));
-//            }
-//        }catch (SQLException e){
-//            System.out.println(e.getMessage());
-//        }
-//        return seasonList;
-//    }
     public boolean save(Season season){
         String query = "INSERT INTO public.seasons " +
                 "(season_hotel_id, start_date, finish_date)" +
@@ -46,12 +28,12 @@ public class SeasonDao {
         }
         return true;
     }
-    public Season findSeasonByHotelID(int seasonHotelId){
-        Season obj = null;
-        String query = "SELECT * FROM public.seasons WHERE season_hotel_id = ?";
+    public Season findSeasonByID(int seasonID){
+        Season obj=null;
+        String query = "SELECT * FROM public.seasons WHERE season_id = ?";
         try {
             PreparedStatement pr = this.con.prepareStatement(query);
-            pr.setInt(1,seasonHotelId);
+            pr.setInt(1,seasonID);
             ResultSet rs = pr.executeQuery();
             if(rs.next()){
                 obj = this.match(rs);
@@ -60,6 +42,21 @@ public class SeasonDao {
             System.out.println(e.getMessage());
         }
         return obj;
+    }
+    public ArrayList<Season> findSeasonsByHotelID(int seasonHotelId){
+        ArrayList<Season> seasons = new ArrayList<>();
+        String query = "SELECT * FROM public.seasons WHERE season_hotel_id = ?";
+        try {
+            PreparedStatement pr = this.con.prepareStatement(query);
+            pr.setInt(1,seasonHotelId);
+            ResultSet rs = pr.executeQuery();
+            while(rs.next()){
+                seasons.add(this.match(rs));
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return seasons;
     }
     public boolean update(Season season){
         String query = "UPDATE public.seasons SET season_hotel_id = ? , start_date = ? ," +
@@ -75,6 +72,22 @@ public class SeasonDao {
             System.out.println(e.getMessage());
         }
         return true;
+    }
+
+    public ArrayList<Season> findAll(){
+        ArrayList<Season> seasons = new ArrayList<>();
+        String query = "SELECT * FROM public.seasons";
+        try{
+            Statement st = this.con.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()){
+                seasons.add(this.match(rs));
+            }
+
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+        return seasons;
     }
 
     public Season match(ResultSet rs) throws SQLException{

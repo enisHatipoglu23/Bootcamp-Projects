@@ -20,7 +20,9 @@ public class PensionView extends Layout{
     private HotelManager hotelManager;
     private PensionManager pensionManager;
     private Hotel hotel;
+    // add pension panel features applied in this class
     public PensionView(Pension pension,Hotel hotel){
+
         this.hotel = hotel;
         this.pensionManager = new PensionManager();
         this.hotelManager = new HotelManager();
@@ -44,7 +46,6 @@ public class PensionView extends Layout{
         this.cmb_pns_hotel.setSelectedItem(null);
 
         btn_save_pens.addActionListener(e -> {
-            // Seçilen otelin index'ini al
             int selectedHotelIndex = cmb_pns_hotel.getSelectedIndex();
             int selectedPensionIndex = cmb_pensions.getSelectedIndex();
             if (selectedHotelIndex == -1) {
@@ -54,13 +55,10 @@ public class PensionView extends Layout{
                 Helper.showMsg("Lütfen bir pansiyon tipi seçiniz.");
                 return;
             }
-            // Seçilen otelin ID'sini al
             int selectedHotelId = hotelManager.findAll().get(selectedHotelIndex).getId();
 
-            // Seçilen pansiyon tipini al
             String selectedPensionType = cmb_pensions.getSelectedItem().toString();
 
-            // Yeni Pension objesi oluştur ve veritabanına kaydet
             this.pension.setHotelId(selectedHotelId);
             this.pension.setPensionType(selectedPensionType);
 
