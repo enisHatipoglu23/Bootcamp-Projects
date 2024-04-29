@@ -21,7 +21,10 @@
 ### Employee
 - The employee is responsible for areas such as hotel management, room management, season management and reservation transactions.
 - When the employee logs in, the employee screen opens. From this screen, you have the authority to list, update and delete hotels.
-- You can also add a new hotel via a button on the same screen.<br>
+- Employee can also add a new hotel via add hotel button on the same screen.
+- In the room tab employee can see all available rooms and also can filter rooms by hotel name, by season date and by city.  Via add room button employee can add room.
+- When you right-click on the hotel to be processed, a pop-up menu with delete, update and add reservation options opens.
+- In the reservation tab employee can see all active reservations and has pop-up menu with delete and update options.<br>
 
 ![employee](https://github.com/enisHatipoglu23/Bootcamp-Projects/assets/83842630/2352c6a3-1e2c-4947-9438-072eb1059280)
 
